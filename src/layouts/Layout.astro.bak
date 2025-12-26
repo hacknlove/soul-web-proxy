@@ -1,0 +1,12 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title }: Props = Astro.props;
+
+<Layout title={title}>
+  <main class="container mx-auto px-4 py-8 sm:flex-col lg:flex-row">
+    <slot />
+  </main>
+</Layout>

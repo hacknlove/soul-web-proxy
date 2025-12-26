@@ -1,0 +1,22 @@
+/* src/styles/colors.css */
+:root {
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-900: var(--color-primary-900);
+}
+
+[data-theme="dark"] {
+  --color-primary-50: #1e3a8a;
+  --color-primary-500: #3b82f6;
+  --color-primary-900: #eff6ff;
+}
+
+/* Utility classes for consistent color application */
+.bg-primary-50 { background-color: var(--color-primary-50); }
+.bg-primary-500 { background-color: var(--color-primary-500); }
+.bg-primary-900 { background-color: var(--color-primary-900); }
+
+.text-primary-500 { color: var(--color-primary-500); }
+.text-primary-900 { color: var(--color-primary-900); }
+
+.border-primary-500 { border-color: var(--color-primary-500); }

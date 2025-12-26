@@ -8,7 +8,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:4321',
+    baseURL: 'http://localhost:54321',
     trace: 'on-first-retry',
   },
   projects: [
@@ -18,8 +18,8 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'cd ../.. && npm run dev:test',
-    url: 'http://localhost:4321',
+    command: 'cd ../.. && npm run dev:test -- --port 54321',
+    url: 'http://localhost:54321',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
   },
