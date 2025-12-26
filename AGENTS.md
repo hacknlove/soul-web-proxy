@@ -5,6 +5,9 @@ Auto-generated from all feature plans. Last updated: 2025-12-26
 ## Active Technologies
 - JavaScript (Node.js LTS) + Tailwind CSS 4.x, Astro 5.x with @astrojs/tailwind integration (001-styling-system)
 - N/A (styling system) (001-styling-system)
+- JavaScript (Node.js LTS) + Astro 5.x, Tailwind CSS 4.x with @astrojs/tailwind (003-virtual-entity-ux)
+- Local file system (folder structure for data) (003-virtual-entity-ux)
+- JavaScript (Node.js LTS) + Astro 5.x, Tailwind CSS 4.x with @astrojs/tailwind integration (003-virtual-entity-ux)
 
 - JavaScript (Node.js LTS) + Astro 5.x (001-test-setup)
 
@@ -32,9 +35,10 @@ specs/
 JavaScript: Follow standard conventions
 
 ## Recent Changes
+- 003-virtual-entity-ux: Added JavaScript (Node.js LTS) + Astro 5.x, Tailwind CSS 4.x with @astrojs/tailwind integration
+- 003-virtual-entity-ux: Added JavaScript (Node.js LTS) + Astro 5.x, Tailwind CSS 4.x with @astrojs/tailwind
 - 001-styling-system: Added JavaScript (Node.js LTS) + Tailwind CSS 4.x, Astro 5.x with @astrojs/tailwind integration
 
-- 001-test-setup: Planned Vitest unit tests + Playwright E2E
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

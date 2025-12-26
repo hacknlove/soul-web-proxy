@@ -18,9 +18,13 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
-    "jsdom": "^26.0.0",
-    "vitest": "^3.0.0",
     "@tailwindcss/vite": "^4.1.18",
-    "react": "^18.0.0"
+    "@testing-library/jest-dom": "^6.9.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-astro": "^1.5.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.7.4",
+    "react": "^18.0.0",
+    "vitest": "^3.0.0"
   }
 }

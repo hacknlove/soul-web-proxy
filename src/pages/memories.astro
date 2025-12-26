@@ -1,0 +1,20 @@
+---
+export const prerender = false;
+
+import MemoryViewer from '../components/MemoryViewer.astro';
+
+const response = await fetch(`${Astro.url.origin}/api/memories.json`);
+const memories = response.ok ? await response.json() : [];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Entity Memories</title>
+  </head>
+  <body>
+    <MemoryViewer memories={memories} />
+  </body>
+</html>

@@ -1,0 +1,39 @@
+---
+import { getParentPath, isRoot, getBreadcrumb } from '../lib/worldNav.js';
+
+const { structure, currentPath = '' } = Astro.props;
+const breadcrumb = getBreadcrumb(currentPath);
+const parentPath = getParentPath(currentPath);
+---
+
+<div class="world-browser">
+  <h2>Virtual World</h2>
+  <div class="breadcrumb">
+    {breadcrumb.map((crumb, index) => (
+      <span>
+        {index > 0 && ' / '}
+        {crumb.path === currentPath ? (
+          crumb.name
+        ) : (
+          <a href={`/world/${crumb.path}`}>{crumb.name}</a>
+        )}
+      </span>
+    ))}
+  </div>
+  {!isRoot(currentPath) && (
+    <div class="back">
+      <a href={`/world/${parentPath}`}>← Back</a>
+    </div>
+  )}
+  <div class="items">
+    {structure.map(item => (
+      <div class="item">
+        {item.type === 'directory' ? (
+          <a href={`/world/${item.path.replace(/^world\//, '')}`}>📁 {item.name}</a>
+        ) : (
+          <span>📄 {item.name}</span>
+        )}
+      </div>
+    ))}
+  </div>
+</div>

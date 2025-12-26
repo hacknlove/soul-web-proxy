@@ -1,0 +1,34 @@
+---
+export const prerender = false;
+
+import StateMonitor from '../components/StateMonitor.astro';
+
+const response = await fetch(`${Astro.url.origin}/api/state.json`);
+const state = response.ok ? await response.json() : { memory: '', emotions: '', thoughts: '', timestamp: '' };
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Internal State</title>
+  </head>
+  <body>
+    <StateMonitor state={state} />
+    <script>
+      async function updateState() {
+        const response = await fetch('/api/state.json');
+        if (response.ok) {
+          const newState = await response.json();
+          // Update the DOM
+          document.querySelector('.state-item:nth-child(1) pre').textContent = newState.memory;
+          document.querySelector('.state-item:nth-child(2) pre').textContent = newState.emotions;
+          document.querySelector('.state-item:nth-child(3) pre').textContent = newState.thoughts;
+          document.querySelector('.timestamp').textContent = 'Last updated: ' + newState.timestamp;
+        }
+      }
+      setInterval(updateState, 30000);
+    </script>
+  </body>
+</html>

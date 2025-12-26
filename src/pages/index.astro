@@ -6,21 +6,20 @@ import Layout from "../layouts/Layout.astro";
 <Layout title={title}>
   <main class="bg-primary-500 text-white p-6">
     <h1 class="text-2xl font-bold">{title}</h1>
-    <p class="text-base mt-4">
-      Welcome to the Soul Web Proxy application with consistent styling and
-      great UX.
-    </p>
-    <div class="mt-6 flex gap-4 sm:flex-col lg:flex-row">
-      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
-        <div class="text-primary-900 dark:text-primary-50 font-medium">
-          Example Card
-        </div>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg">
-        <div class="text-primary-900 dark:text-primary-50 font-medium">
-          Another Card
-        </div>
-      </div>
-    </div>
+     <p class="text-base mt-4">
+       Welcome to the Soul Web Proxy application. Explore the virtual entity through
+       the following features:
+     </p>
+     <nav class="mt-6 flex flex-col gap-4 sm:flex-row lg:flex-row">
+       <a href="/world" class="bg-white dark:bg-gray-800 text-primary-900 dark:text-primary-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow font-medium text-center">
+         Browse Virtual World
+       </a>
+       <a href="/memories" class="bg-white dark:bg-gray-800 text-primary-900 dark:text-primary-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow font-medium text-center">
+         View Entity Memories
+       </a>
+       <a href="/state" class="bg-white dark:bg-gray-800 text-primary-900 dark:text-primary-50 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow font-medium text-center">
+         Monitor Internal State
+       </a>
+     </nav>
   </main>
 </Layout>

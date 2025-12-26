@@ -1,0 +1,17 @@
+---
+const { memories } = Astro.props;
+---
+
+<div class="memory-viewer">
+  <h2>Entity Memories</h2>
+  <div class="memories-list">
+    {memories.map(memory => (
+      <div class="memory-item">
+        <h3>{memory.title}</h3>
+        <p>{memory.date}</p>
+        <div>{memory.content.substring(0, 200)}...</div>
+        <a href={`/memories/${memory.id}`}>Read more</a>
+      </div>
+    ))}
+  </div>
+</div>

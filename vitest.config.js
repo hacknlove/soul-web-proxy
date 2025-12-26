@@ -4,6 +4,7 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
+    setupFiles: ['tests/setup.js'],
     include: ['tests/unit/**/*.test.js', 'tests/visual/**/*.test.js'],
     exclude: ['packages/**', 'astro.config.*.mjs']
   }

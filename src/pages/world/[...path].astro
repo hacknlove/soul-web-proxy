@@ -1,0 +1,21 @@
+---
+export const prerender = false;
+
+import WorldBrowser from '../../components/WorldBrowser.astro';
+
+const path = Astro.params.path || '';
+const response = await fetch(`${Astro.url.origin}/api/world/${path}.json`);
+const structure = response.ok ? await response.json() : [];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Virtual World</title>
+  </head>
+  <body>
+    <WorldBrowser structure={structure} currentPath={path} />
+  </body>
+</html>

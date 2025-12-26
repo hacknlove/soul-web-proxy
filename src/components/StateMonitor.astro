@@ -1,0 +1,20 @@
+---
+const { state } = Astro.props;
+---
+
+<div class="state-monitor">
+  <h2>Internal State</h2>
+  <div class="state-item">
+    <h3>Memory</h3>
+    <pre>{state.memory}</pre>
+  </div>
+  <div class="state-item">
+    <h3>Emotions</h3>
+    <pre>{state.emotions}</pre>
+  </div>
+  <div class="state-item">
+    <h3>Thoughts</h3>
+    <pre>{state.thoughts}</pre>
+  </div>
+  <div class="timestamp">Last updated: {state.timestamp}</div>
+</div>
