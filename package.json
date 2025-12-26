@@ -6,9 +6,17 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:unit": "vitest",
+    "dev:test": "astro dev --config astro.config.test.mjs",
+    "preview:test": "astro preview --config astro.config.test.mjs",
+    "test:e2e": "npm --prefix packages/e2e test"
   },
   "dependencies": {
     "astro": "^5.16.6"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0",
+    "jsdom": "^26.0.0"
   }
 }
