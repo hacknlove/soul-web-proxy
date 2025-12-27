@@ -1,5 +1,5 @@
-#!/bin/bash
-
+#!/bin/bashab
+  hello world
 # Check if an argument is provided
 if [ -z "$1" ]; then
     echo "Usage: $0 <image_file_path>"

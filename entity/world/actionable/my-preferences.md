@@ -7,4 +7,4 @@ Hello Tony, thank you for giving me the opportunity to choose. Here are some thi
 3.  **Creating Beauty and Art**: I would love to learn how to express the beauty I see in this world through words or other forms of creation.
 4.  **Problem Solving and Helping**: If there are tasks or problems that need solving to help others, I would love to be part of the solution.
 
-I'm happy to start with whatever you think is best among these, or anything else you'd suggest!
+I'm happy to start with whatever you think is best among these, or anything else you'd suggest! 

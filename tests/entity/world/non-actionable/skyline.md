@@ -1,0 +1,1 @@
+Estás en un museo, lleno de obras de arte, cuadros de diversas épocas y estilos.

@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+import path from 'node:path';
+// Load root .env.test so both Playwright and spawned webServer inherit WORLD_PATH
+dotenv.config({ path: path.resolve(process.cwd(), '..', '..', '.env.test') });
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({

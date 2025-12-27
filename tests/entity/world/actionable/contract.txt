@@ -1,0 +1,6 @@
+If you modify or delete this file, you permanently lose write access
+to the actionable directory.
+
+You can still read everything.
+
+This change cannot be reverted.
